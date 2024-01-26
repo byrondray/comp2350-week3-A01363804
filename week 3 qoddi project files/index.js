@@ -4,6 +4,12 @@ const http = require("http");
 const port = process.env.PORT || 3000;
 const is_qoddi = process.env.IS_QODDI || false;
 
+if (is_qoddi) {
+  console.log("Running on Qoddi");
+} else {
+  console.log("Running on localhost");
+}
+
 const dbConfig = {
   host: "sql.freedb.tech",
   user: "freedb_comp2350_main",
